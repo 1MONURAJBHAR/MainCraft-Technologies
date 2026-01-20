@@ -33,7 +33,7 @@ export default function App() {
     setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   };
 
-  // ✅ Add Product
+  // Add Product
   const addProduct = async (e) => {
     e.preventDefault();
 
@@ -51,7 +51,7 @@ export default function App() {
     }
   };
 
-  // ✅ Delete Product
+  // Delete Product
   const deleteProduct = async (id) => {
     try {
       await axios.delete(`${API}/${id}`);
@@ -61,7 +61,7 @@ export default function App() {
     }
   };
 
-  // ✅ When click Edit
+  //  When click Edit
   const startEdit = (product) => {
     setEditId(product._id);
     setForm({
@@ -71,7 +71,7 @@ export default function App() {
     });
   };
 
-  // ✅ Update Product
+  // Update Product
   const updateProduct = async (e) => {
     e.preventDefault();
 
@@ -90,7 +90,7 @@ export default function App() {
     }
   };
 
-  // ✅ Cancel Edit
+  // Cancel Edit
   const cancelEdit = () => {
     setEditId(null);
     setForm({ title: "", price: "", description: "" });
