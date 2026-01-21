@@ -14,7 +14,7 @@ export default function App() {
     description: "",
   });
 
-  const [editId, setEditId] = useState(null); // ✅ track editing product id
+  const [editId, setEditId] = useState(null); //track editing product id
 
   const fetchProducts = async () => {
     try {
